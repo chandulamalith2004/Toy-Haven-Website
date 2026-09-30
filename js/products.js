@@ -131,68 +131,68 @@ const container = document.getElementById("product-container");
 
 function displayProducts(items){
 
-
-    if(!container){
-        return;
-    }
-
-
-    container.innerHTML = "";
+if(!container){
+return;
+}
 
 
-    items.forEach(product=>{
+container.innerHTML = "";
 
 
-        container.innerHTML += `
+items.forEach(product=>{
 
 
-        <div class="card">
+container.innerHTML += `
 
 
-        <img 
-        src="${product.image}"
-        width="150"
-        height="150"
-        >
+<div class="card">
 
 
-        <h3>
-        ${product.name}
-        </h3>
+<img 
+src="${product.image}"
+alt="${product.name}"
+width="150"
+height="150"
+>
 
 
-        <p>
-        ${product.category}
-        </p>
+<h3>
+${product.name}
+</h3>
 
 
-        <p>
-        Rs. ${product.price}
-        </p>
+<p>
+${product.category}
+</p>
 
 
-        <button onclick="viewDetails(${product.id})">
-        View Details
-        </button>
+<p>
+Rs. ${product.price}
+</p>
 
 
-        <button onclick="addToCart(${product.id})">
-        Add to Cart
-        </button>
+<button onclick="viewDetails(${product.id})">
+View Details
+</button>
 
 
-        <button onclick="addToWishlist(${product.id})">
-        Add to Wishlist
-        </button>
+<button onclick="addToCart(${product.id})">
+Add to Cart
+</button>
 
 
-        </div>
+<button onclick="addToWishlist(${product.id})">
+Add to Wishlist
+</button>
 
 
-        `;
+</div>
 
 
-    });
+`;
+
+
+});
 
 
 }
@@ -201,7 +201,7 @@ function displayProducts(items){
 
 if(container){
 
-    displayProducts(products);
+displayProducts(products);
 
 }
 
@@ -216,19 +216,17 @@ if(searchInput){
 searchInput.addEventListener("input",function(){
 
 
-    const value = this.value.toLowerCase();
+const value = this.value.toLowerCase();
 
 
-    const filteredProducts = products.filter(product =>
+const filteredProducts = products.filter(product =>
+
+product.name.toLowerCase().includes(value)
+
+);
 
 
-        product.name.toLowerCase().includes(value)
-
-
-    );
-
-
-    displayProducts(filteredProducts);
+displayProducts(filteredProducts);
 
 
 });
@@ -247,33 +245,32 @@ if(categorySelect){
 categorySelect.addEventListener("change",function(){
 
 
-    const selectedCategory = this.value;
+const selectedCategory = this.value;
 
 
-    if(selectedCategory === "all"){
+if(selectedCategory === "all"){
 
 
-        displayProducts(products);
+displayProducts(products);
 
 
-    }
-
-    else{
+}
 
 
-        const filteredProducts = products.filter(product =>
+else{
 
 
-            product.category === selectedCategory
+const filteredProducts = products.filter(product =>
+
+product.category === selectedCategory
+
+);
 
 
-        );
+displayProducts(filteredProducts);
 
 
-        displayProducts(filteredProducts);
-
-
-    }
+}
 
 
 });
@@ -283,33 +280,51 @@ categorySelect.addEventListener("change",function(){
 
 
 
+
 function viewDetails(id){
 
+
 const product = products.find(
+
 item => item.id === id
+
 );
+
 
 
 document.getElementById("modal-details").innerHTML = `
 
-<img src="${product.image}">
+
+<img 
+src="${product.image}" 
+alt="${product.name}"
+>
+
 
 <h3>${product.name}</h3>
 
+
 <p>${product.category}</p>
 
+
 <p>Rs. ${product.price}</p>
+
 
 <button onclick="addToCart(${product.id})">
 Add to Cart
 </button>
 
+
 `;
+
 
 
 document.getElementById("product-modal").style.display="flex";
 
+
 }
+
+
 
 
 
@@ -343,6 +358,7 @@ if(existing){
 
 showToast("Product already in wishlist");
 
+
 return;
 
 
@@ -368,50 +384,93 @@ JSON.stringify(wishlist)
 
 );
 
+
+
 showToast("Added to wishlist");
 
+
 }
+
+
+
+
 
 function displayProductOfDay(){
 
-    const dailyContainer = document.getElementById("daily-product");
 
-    if(!dailyContainer){
-        return;
-    }
+const dailyContainer = document.getElementById("daily-product");
 
-    let product = products[Math.floor(Math.random()*products.length)];
 
-    dailyContainer.innerHTML = `
 
-    <img src="${product.image}">
+if(!dailyContainer){
 
-    <h3>${product.name}</h3>
-
-    <p>${product.category}</p>
-
-    <p>Rs. ${product.price}</p>
-
-    <button onclick="addToCart(${product.id})">
-    Add to Cart
-    </button>
-
-    `;
+return;
 
 }
+
+
+
+let product = products[Math.floor(Math.random()*products.length)];
+
+
+
+dailyContainer.innerHTML = `
+
+
+
+<img 
+src="${product.image}" 
+alt="${product.name}"
+>
+
+
+
+<h3>${product.name}</h3>
+
+
+<p>${product.category}</p>
+
+
+<p>Rs. ${product.price}</p>
+
+
+<button onclick="addToCart(${product.id})">
+
+Add to Cart
+
+</button>
+
+
+
+`;
+
+
+
+}
+
+
 
 
 displayProductOfDay();
 
+
+
+
+
 const closeModal = document.querySelector(".close-modal");
+
 
 
 if(closeModal){
 
+
 closeModal.onclick=function(){
+
 
 document.getElementById("product-modal").style.display="none";
 
+
 }
+
 
 }
