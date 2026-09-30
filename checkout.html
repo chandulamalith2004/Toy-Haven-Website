@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Toy Haven | Checkout</title>
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="stylesheet" href="css/style.css">
+<link rel="manifest" href="manifest.json">
+</head>
+
+
+<body>
+
+
+<header>
+
+<nav class="navbar">
+
+<h1 class="logo">
+Toy Haven
+</h1>
+
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="products.html">Products</a></li>
+
+<li>
+<a href="cart.html">
+Cart (<span id="cart-count">0</span>)
+</a>
+</li>
+
+<li><a href="wishlist.html">Wishlist</a></li>
+
+<li><a href="feedback.html">Support</a></li>
+
+</ul>
+
+<button class="hamburger">
+☰
+</button>
+
+</nav>
+
+</header>
+
+
+
+<section class="featured">
+
+
+<h2>
+Checkout
+</h2>
+
+
+
+<form id="checkout-form">
+
+
+<label>
+Full Name
+</label>
+
+<br>
+
+<input type="text" id="customerName" required>
+
+
+<br><br>
+
+
+
+<label>
+Email
+</label>
+
+<br>
+
+<input type="email" id="email" required>
+
+
+<br><br>
+
+
+
+<label>
+Shipping Address
+</label>
+
+<br>
+
+<textarea id="address" required></textarea>
+
+
+<br><br>
+
+
+
+<label>
+Payment Method
+</label>
+
+<br>
+
+
+<select id="payment" required>
+
+<option value="">
+Select Payment
+</option>
+
+<option>
+Credit Card
+</option>
+
+<option>
+PayPal
+</option>
+
+<option>
+Cash on Delivery
+</option>
+
+
+</select>
+
+
+<br><br>
+
+
+
+<div class="order-summary">
+
+<h3>
+Order Summary
+</h3>
+
+<div id="order-items"></div>
+
+<hr>
+
+<h3 id="checkout-total">
+Order Total: Rs. 0
+</h3>
+
+</div>
+
+
+
+<button class="btn" type="submit">
+
+Place Order
+
+</button>
+
+
+</form>
+
+
+<div id="confirmation"></div>
+
+
+</section>
+
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/checkout.js"></script>
+
+
+<footer>
+
+<h3>Toy Haven</h3>
+
+<p>Collectible toys, figurines, board games and diecast models.</p>
+
+<p>
+© 2026 Toy Haven. All rights reserved.
+</p>
+
+</footer>
+
+</body>
+
+</html>

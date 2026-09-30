@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Toy Haven | Cart</title>
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<nav class="navbar">
+
+<h1 class="logo">
+Toy Haven
+</h1>
+
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="products.html">Products</a></li>
+
+<li>
+<a href="cart.html">
+Cart (<span id="cart-count">0</span>)
+</a>
+</li>
+
+<li><a href="wishlist.html">Wishlist</a></li>
+
+<li><a href="feedback.html">Support</a></li>
+
+</ul>
+
+<button class="hamburger">
+☰
+</button>
+
+</nav>
+
+</header>
+
+
+
+<section class="featured">
+
+
+<h2>
+Shopping Cart
+</h2>
+
+
+<div id="cart-container"
+class="product-grid">
+
+</div>
+
+
+
+<div class="cart-summary">
+
+
+<h3 id="cart-total">
+
+Total: Rs. 0
+
+</h3>
+
+
+
+<div class="cart-actions">
+
+
+<button onclick="clearCart()">
+
+Clear Cart
+
+</button>
+
+
+
+<a href="checkout.html" 
+class="btn"
+onclick="return checkCart();">
+
+    Proceed to Checkout
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/main.js"></script>
+
+<footer>
+
+<h3>Toy Haven</h3>
+
+<p>Collectible toys, figurines, board games and diecast models.</p>
+
+<p>
+© 2026 Toy Haven. All rights reserved.
+</p>
+
+</footer>
+
+</body>
+
+</html>

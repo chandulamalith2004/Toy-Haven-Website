@@ -1,0 +1,16 @@
+{
+  "name": "Toy Haven",
+  "short_name": "Toy Haven",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1b1f3b",
+  "description": "Collectible toys, figurines, board games and diecast models store",
+  "icons": [
+    {
+      "src": "images/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

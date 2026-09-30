@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Toy Haven | Support</title>
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="stylesheet" href="css/style.css">
+<link rel="manifest" href="manifest.json">
+</head>
+
+
+<body>
+
+
+<header>
+
+<nav class="navbar">
+
+<h1 class="logo">
+Toy Haven
+</h1>
+
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="products.html">Products</a></li>
+
+<li>
+<a href="cart.html">
+Cart (<span id="cart-count">0</span>)
+</a>
+</li>
+
+<li><a href="wishlist.html">Wishlist</a></li>
+
+<li><a href="feedback.html">Support</a></li>
+
+</ul>
+
+<button class="hamburger">
+☰
+</button>
+
+</nav>
+
+</header>
+
+
+
+<section class="products-page">
+
+
+<h2>
+Contact Support
+</h2>
+
+
+
+<form id="feedback-form">
+
+
+<label>
+Name
+</label>
+
+<br>
+
+<input type="text" id="feedback-name" required>
+
+
+<br><br>
+
+
+<label>
+Email
+</label>
+
+<br>
+
+<input type="email" id="feedback-email" required>
+
+
+<br><br>
+
+
+<label>
+Message
+</label>
+
+<br>
+
+<textarea id="feedback-message" required></textarea>
+
+
+<br><br>
+
+
+<button class="btn" type="submit">
+
+Submit Feedback
+
+</button>
+
+
+</form>
+
+
+
+<h2>
+Frequently Asked Questions
+</h2>
+
+
+
+<div class="faq">
+
+
+<button onclick="showAnswer(1)">
+How long does delivery take?
+</button>
+
+<p id="answer1">
+Delivery usually takes 3-5 working days.
+</p>
+
+
+
+<button onclick="showAnswer(2)">
+Do you accept returns?
+</button>
+
+<p id="answer2">
+Yes, returns are accepted for damaged products.
+</p>
+
+
+
+<button onclick="showAnswer(3)">
+How can I track my order?
+</button>
+
+<p id="answer3">
+You can track your order using your order confirmation details.
+</p>
+
+
+</div>
+
+
+
+<script src="js/feedback.js"></script>
+<script src="js/main.js"></script>
+
+
+<footer>
+
+<h3>Toy Haven</h3>
+
+<p>Collectible toys, figurines, board games and diecast models.</p>
+
+<p>
+© 2026 Toy Haven. All rights reserved.
+</p>
+
+</footer>
+
+</body>
+
+</html>

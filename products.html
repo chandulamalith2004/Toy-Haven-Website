@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Toy Haven | Products</title>
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="stylesheet" href="css/style.css">
+<link rel="manifest" href="manifest.json">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<nav class="navbar">
+
+<h1 class="logo">
+Toy Haven
+</h1>
+
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="products.html">Products</a></li>
+
+<li>
+<a href="cart.html">
+Cart (<span id="cart-count">0</span>)
+</a>
+</li>
+
+<li><a href="wishlist.html">Wishlist</a></li>
+
+<li><a href="feedback.html">Support</a></li>
+
+</ul>
+
+<button class="hamburger">
+☰
+</button>
+
+
+</nav>
+
+</header>
+
+
+
+<section class="products-page">
+
+
+<h2>
+Our Products
+</h2>
+
+
+<input 
+type="text"
+id="search"
+placeholder="Search products...">
+
+
+
+<select id="category">
+
+<option value="all">
+All Categories
+</option>
+
+<option value="Figurines">
+Figurines
+</option>
+
+<option value="Toys">
+Toys
+</option>
+
+<option value="Board Games">
+Board Games
+</option>
+
+<option value="Diecast Cars">
+Diecast Cars
+</option>
+
+
+</select>
+
+
+
+<div id="product-container" class="product-grid">
+
+</div>
+
+
+</section>
+
+<div id="product-modal" class="modal">
+
+<div class="modal-content">
+
+<span class="close-modal">
+&times;
+</span>
+
+<div id="modal-details"></div>
+
+</div>
+
+</div>
+
+
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/main.js"></script>
+
+<footer>
+
+<h3>Toy Haven</h3>
+
+<p>Collectible toys, figurines, board games and diecast models.</p>
+
+<p>
+© 2026 Toy Haven. All rights reserved.
+</p>
+
+</footer>
+
+</body>
+
+</html>

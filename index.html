@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Toy Haven | Collectible Store</title>
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="stylesheet" href="css/style.css">
+<link rel="manifest" href="manifest.json">
+
+</head>
+
+
+<body>
+
+
+
+<header>
+
+<nav class="navbar">
+
+
+<h1 class="logo">
+Toy Haven
+</h1>
+
+
+<ul class="nav-links">
+
+<li>
+<a href="index.html">Home</a>
+</li>
+
+<li>
+<a href="products.html">Products</a>
+</li>
+
+<li>
+<a href="cart.html">
+Cart (<span id="cart-count">0</span>)
+</a>
+</li>
+
+<li>
+<a href="wishlist.html">Wishlist</a>
+</li>
+
+<li>
+<a href="feedback.html">Support</a>
+</li>
+
+
+</ul>
+
+
+<button class="hamburger">
+☰
+</button>
+
+
+</nav>
+
+</header>
+
+
+
+<section class="hero">
+
+
+<div class="hero-content">
+
+
+<h2>
+Discover Amazing Collectibles
+</h2>
+
+
+<p>
+Figurines, toys, board games and diecast models
+</p>
+
+
+<a href="products.html" class="btn">
+Shop Now
+</a>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<section class="featured">
+
+<section class="daily-product">
+
+<h2>⭐ Product of the Day</h2>
+
+<div id="daily-product">
+
+</div>
+
+</section>
+
+<h2>
+Featured Products
+</h2>
+
+
+<div class="product-grid">
+
+
+<div class="card">
+<img src="images/products/spider.jpg">
+
+
+<h3>
+Spider Hero Figurine
+</h3>
+
+
+<p>
+Rs.5500
+</p>
+
+<button onclick="addToCart(1)">
+Add to Cart
+</button>
+
+</div>
+
+
+
+<div class="card">
+<img src="images/products/car.jpg">
+
+<h3>
+Diecast Car
+</h3>
+
+<p>
+Rs.4500
+</p>
+
+<button onclick="addToCart(2)">
+Add to Cart
+</button>
+
+</div>
+
+
+<div class="card">
+<img src="images/products/game.jpg">
+
+<h3>
+Board Game
+</h3>
+
+<p>
+Rs.2500
+</p>
+
+<button onclick="addToCart(3)">
+Add to Cart
+</button>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+<footer>
+
+
+<h3>
+Toy Haven
+</h3>
+
+
+<p>
+Subscribe for new arrivals
+</p>
+
+
+<form id="newsletter">
+
+
+<input 
+type="email"
+placeholder="Your email"
+required>
+
+
+<button>
+Subscribe
+</button>
+
+
+</form>
+
+
+
+</footer>
+
+
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/main.js"></script>
+
+<footer>
+
+<h3>Toy Haven</h3>
+
+<p>Collectible toys, figurines, board games and diecast models.</p>
+
+<p>
+© 2026 Toy Haven. All rights reserved.
+</p>
+
+</footer>
+
+<script>
+
+if("serviceWorker" in navigator){
+
+navigator.serviceWorker.register("service-worker.js")
+.then(function(){
+console.log("Service Worker Registered");
+});
+
+}
+
+</script>
+
+
+</body>
+
+
+</html>
